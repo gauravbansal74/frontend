@@ -1,56 +1,18 @@
-<div id="nav" class="pure-u">
-        <a href="#" class="nav-menu-button">Menu</a>
 
-        <div class="nav-inner">
-            <button class="primary-button pure-button">Compose</button>
 
-            <div class="pure-menu pure-menu-open">
-                <ul>
-                    <li><a href="#">Inbox <span class="email-count">(2)</span></a></li>
-                    <li><a href="#">Important</a></li>
-                    <li><a href="#">Sent</a></li>
-                    <li><a href="#">Drafts</a></li>
-                    <li><a href="#">Trash</a></li>
-                    <li class="pure-menu-heading">Labels</li>
-                    <li><a href="#"><span class="email-label-personal"></span>Personal</a></li>
-                    <li><a href="#"><span class="email-label-work"></span>Work</a></li>
-                    <li><a href="#"><span class="email-label-travel"></span>Travel</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-<div id="list" class="pure-u-1">
-        <div class="email-item email-item-selected pure-g" ng-repeat="job in jobs">
-            <div class="pure-u">
-                <img class="email-avatar" alt="{{job.name}}" height="64" width="64" src="img/common/{{job.imageUrl}}">
-            </div>
-
-            <div class="pure-u-3-4">
-               <!-- <h5 class="email-name">{{category.name}}</h5> -->
-                <a class="email-subject" ng-click="jobdetail(job.id, job.categoryid)" style="cursor: pointer;">{{job.name}}</a>
-                <p class="email-desc">
-                    {{job.keywords}}
-                </p>
-            </div>
-        </div>
-    </div>
-
-<div id="main" class="pure-u-1">
         <div class="email-content">
             <div class="email-content-header ">
-                <div >
-        <h2 class="email-content-title">{{data.name}}</h2>
-        <div class="email-content-subtitle">
-           <span class="glyphicon glyphicon-briefcase"> {{data.minExperience}}-{{data.maxExperience}} Yrs.</span>    
-           <span class="glyphicon glyphicon-map-marker"> {{data.city}} / {{data.state}} / {{data.country}}</span>
-        </div>
+                <h2><b>{{data.name}}</b></h2>
+                <div class="email-content-subtitle">
+                    <div class="glyphicon glyphicon-tower">  {{data.companyName}} </div><br/>
+                    <div class="glyphicon glyphicon-briefcase"> {{data.minExperience}}-{{data.maxExperience}} Yrs.</div> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <div class="glyphicon glyphicon-map-marker"> {{data.city}}/{{data.state}}/{{data.country}}</div>
                 </div>
-
-                <div class="email-content-controls" ng-if="data.applicationMode == 0">
+                <br/>
+                <div ng-if="data.applicationMode == 0">
                     <button type="button" class="btn btn-primary">Apply</button>
                 </div>
-                <div class="email-content-controls" ng-if="data.applicationMode == 1">
+                <div ng-if="data.applicationMode == 1">
                     <a class="btn btn-primary" target="_blank" href="{{data.modeSource}}">Apply on company website</a>
                 </div>
             </div>
@@ -59,4 +21,4 @@
                 {{data.body}}
             </div>
         </div>
-    </div>
+   

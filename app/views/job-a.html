@@ -1,0 +1,17 @@
+
+
+
+        <div class="email-item email-item-selected pure-g" ng-repeat="job in jobs">
+            <div class="pure-u" style="margin:2px;">
+                  <div class="numberCircle">Jan</div>
+            </div>
+
+            <div class="pure-u-3-4">
+               <!-- <h5 class="email-name">{{category.name}}</h5> -->
+                <a class="email-subject" ng-click="jobdetail(job.id, job.categoryid)" style="cursor: pointer;">{{job.name}}</a>
+                <p class="email-desc">
+                    {{job.companyName}}
+                </p>
+            </div>
+        </div>
+   

@@ -1,0 +1,18 @@
+
+
+
+        <div class="email-item email-item-selected pure-g" ng-repeat="category in categories">
+            <div class="pure-u">
+                <img class="email-avatar" alt="{{category.name}}" height="64" width="64" src="img/common/{{category.imageUrl}}">
+            </div>
+
+            <div class="pure-u-3-4">
+               <!-- <h5 class="email-name">{{category.name}}</h5> -->
+                <a class="email-subject" href="#/job/{{category.id}}">{{category.name}}</a>
+                <p class="email-desc">
+                    {{category.description}}
+                </p>
+            </div>
+        </div>
+   
+

@@ -18,7 +18,7 @@ angular.module('testdrApp')
   			console.log(errormessage);		
   	 });
 
-  			$scope.data ="";
+  	$scope.data ="";
   	$scope.jobdetail = function(jobId, categoryId){
   		coreService.getJobDetail(jobId, categoryId)
   			.then(function(successmessage){

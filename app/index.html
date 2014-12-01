@@ -12,9 +12,10 @@
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/pure-min.css">
     <link rel="stylesheet" href="styles/layouts/email.css">
-    <link rel="stylesheet" href="scripts/main.js">
+   
     <!-- endbuild -->
   </head>
   <body ng-app="testdrApp">
@@ -25,10 +26,31 @@
     <!-- Add your site or application content here -->
    <div id="layout" class="content pure-g">
     
+    <div id="nav" class="pure-u">
+        <a href="#" class="nav-menu-button">Menu</a>
 
+        <div class="nav-inner">
+            
+            <div class="pure-menu pure-menu-open">
+                <ul>
+                   <!-- <li><a href="#/">Home <span class="email-count">(2)</span></a></li> -->
+                    <li><a ui-sref="app" class="glyphicon glyphicon-home"> Home</a></li>
+                    <li><a ui-sref="profile" class="glyphicon glyphicon-user"> Profile</a></li>
+                    <li><a ui-sref="#" class="glyphicon glyphicon-envelope"> Message</a></li>
+                    <li><a ui-sref="#" class= "glyphicon glyphicon-credit-card"> Wallet</a></li>
+                    <li><a ui-sref="#" class="glyphicon glyphicon-wrench"> Setting</a></li>
+                    <li class="pure-menu-heading">Labels</li>
+                    <li><a ui-sref="#"><span class="email-label-personal"></span>Personal</a></li>
+                    <li><a ui-sref="#"><span class="email-label-work"></span>Work</a></li>
+                    <li><a ui-sref="#"><span class="email-label-travel"></span>Travel</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
     
 
-    <div ui-view=""></div>
+    <div ui-view="viewA" id="list" class="pure-u-1"></div>
+    <div ui-view="viewB" id="main" class="pure-u-1"></div>
 </div>
 
 
@@ -70,6 +92,7 @@
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/job.js"></script>
+        <script src="scripts/controllers/profile.js"></script>
         <!-- endbuild -->
 </body>
 </html>

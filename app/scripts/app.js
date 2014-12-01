@@ -25,17 +25,49 @@
       $urlRouterProvider.otherwise('/');
       $stateProvider
 
-    .state('app', {
-        url: "/",
-        templateUrl: "views/main.html",
-        controller: 'MainCtrl'
-      })
-
+    .state('app',{
+      url : "/",
+       views: {
+            "viewA":{  
+                templateUrl : "views/main-a.html", 
+                controller : 'MainCtrl' 
+              },
+            "viewB":{  
+                templateUrl : "views/main.html", 
+                controller : 'MainCtrl' 
+              }
+        }
+    })
     .state('job',{
       url: "/job/:categoryId",
-      templateUrl: "views/job.html",
-      controller: 'JobCtrl'
+      views :{
+        "viewA":{ 
+          templateUrl : "views/job-a.html",
+            controller: 'JobCtrl'
+        },
+        "viewB":{  
+          templateUrl : "views/job.html",
+            controller: 'JobCtrl'
+           }
+      },
+    
       })
+
+
+    .state('profile',{
+      url : "/profile",
+       views: {
+          "viewA":{  
+            templateUrl : "views/profile-a.html",
+            controller : 'ProfileCtrl'
+             },
+          "viewB":{  
+            templateUrl : "views/profile.html",
+            controller : 'ProfileCtrl'
+             }
+      }
+      
+    })
 })
  .service('coreService',function($http, $q, appConfig){
 
