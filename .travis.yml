@@ -1,0 +1,16 @@
+language: node_js
+node_js:
+  - "4.4.5"
+branches:
+  except:
+  - /^[0-9]
+before_script:
+- cp .netrc ~
+- chmod 600 ~/.netrc
+- npm install -g bower grunt-cli
+- bower --version
+- bower install
+- grunt clean
+after_success:
+
+after_failure:
