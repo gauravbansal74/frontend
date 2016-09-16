@@ -5,8 +5,6 @@ branches:
   except:
   - /^[0-9]
 before_script:
-- cp .netrc ~
-- chmod 600 ~/.netrc
 - npm install -g bower grunt-cli
 - bower --version
 - bower install
